@@ -4,6 +4,11 @@ body {
   background-color: #f0f8ff; /* Light blue background */
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+body:hover {
+  background-color: #e6f7ff; /* Light cyan background on hover */
 }
 
 .App {
@@ -15,6 +20,15 @@ nav {
   background-color: #4682b4; /* Steel blue */
   padding: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav:hover {
+  background-color: #5a9bd4; /* Lighter steel blue */
 }
 
 nav ul {
@@ -160,4 +174,9 @@ a:hover {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Adjust page content to account for fixed navigation bar */
+.container {
+  margin-top: 80px; /* Add margin to avoid overlap with fixed navbar */
 }
